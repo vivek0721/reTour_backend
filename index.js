@@ -1,12 +1,8 @@
-require('dotenv').config()
-const express = require('express')
-const app = express()
-const port = 3000
+import dotenv from "dotenv";
+import express from "express";
+import mongoose from 'mongoose';
+import dbConnect from "./db/index.js";
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+dotenv.config();
+dbConnect();
 
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${port}`)
-})
