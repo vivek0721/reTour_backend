@@ -5,16 +5,18 @@ const productSchema = new mongoose.Schema({
     desc: String,
     date: Date,
     Location: String,
-    owner_details:{
-        name: String,
-        owner_number: Number,
-        uid: String,
+    image:{
+        type: String,  //cloudinary
+        required: true
     },
-    finder_detail:{
-        name: String,
-        finder_number: Number,
-        uid: String
-    },
+    ownerName:String,
+    ownerNumber: Number,
+    ownerUid: String,
+    
+    finderName: String,
+    finderNumber: Number,    
+    finderUid: String, 
+        
     flag: {
         type: String,
         enum: ['lost', 'found', 'claimed'],
@@ -23,3 +25,4 @@ const productSchema = new mongoose.Schema({
 },{timestamps: true})
 
 export const Product= mongoose.model('Product', productSchema )
+
