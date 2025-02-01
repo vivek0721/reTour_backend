@@ -40,7 +40,7 @@ const registerItemFinder= async(req, res)=>{
     })
    
     const createdProduct = await Product.findById(product._id)
-
+    //console.log(createdProduct)
     return res.status(201).json({createdProduct})
   }
    
