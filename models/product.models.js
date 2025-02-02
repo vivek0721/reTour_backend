@@ -4,7 +4,7 @@ const productSchema = new mongoose.Schema({
     title: {type: String, required: true},
     desc: String,
     date: Date,
-    Location: String,
+    location: String,
     image:{
         type: String,  //cloudinary
         required: true

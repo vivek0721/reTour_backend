@@ -16,7 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 
 
 import itemRouter from "./routes/item.routes.js"
-app.use("/newItem", itemRouter)
+app.use("/items", itemRouter)
+
 
 
 
