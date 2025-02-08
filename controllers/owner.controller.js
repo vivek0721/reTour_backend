@@ -29,7 +29,7 @@ const registerItemOwner= async(req, res)=>{
         desc,
         date,
         location,
-        image: image?.url,
+        image: image?.secure_url,
         ownerName,
         ownerNumber,
         ownerUid,
